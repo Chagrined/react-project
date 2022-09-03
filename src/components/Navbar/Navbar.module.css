@@ -1,0 +1,10 @@
+.nav {
+    grid-area: nav;
+
+    background-color: greenyellow;
+    list-style-type: none;
+}
+
+.nav a {
+    text-decoration: none;
+}
