@@ -10,10 +10,10 @@ const MyPosts = () => {
                 <div><button>add post</button></div>
             </div>
             <div>
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+                <Post likeCount={3} message='I learn React' />
+                <Post likeCount={7} message='Next i will learn Node.js' />
+                <Post likeCount={2} message='Node.js it is platform for javascript'/>
+                <Post likeCount={15} message='I like codding'/>
             </div>
         </div>
     )

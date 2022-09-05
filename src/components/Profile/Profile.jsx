@@ -6,7 +6,7 @@ const Profile = () => {
     return (
         <div className={style.profile}>
             <div>
-                <img alt='profile-img' src={contentImg} />
+                <img className={style.bgImage} alt='profile-img' src={contentImg} />
             </div>
             <div>
                 ava + desc

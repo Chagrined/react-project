@@ -1,14 +1,14 @@
+import avatarPost from '../../../../images/avatarPost.png';
 import style from './Post.module.css';
-import avatarPost from '../../../../images/avatarPost.png'
 
-const Post = () => {
+const Post = (props) => {
     return (
         <div className={style.item}>
-            <img src={avatarPost} alt="post avatar" />
+            <img src={avatarPost} alt="post avatar" className={style.avatarPost}/>
             <div>
-                <span>I learn React!</span>
+                <span>{props.message}</span>
             </div>
-            <button>LIKE</button>
+            <button>LIKE {props.likeCount}</button>
         </div>
 
     )
