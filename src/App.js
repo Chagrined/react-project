@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Dialogs from './components/Dialogs/Dialogs';
@@ -11,8 +12,10 @@ function App() {
       <Header />
       <Navbar />
       <div className='content'>
-        <Profile />
-        {/* <Dialogs /> */}
+        <Routes>
+          <Route path='/' element={<Profile />} />
+          <Route path='/dialogs' element={<Dialogs />} />
+        </Routes>
       </div>
     </div>
   );
