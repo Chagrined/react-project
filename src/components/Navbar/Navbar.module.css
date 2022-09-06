@@ -4,15 +4,17 @@
     background-color: greenyellow;
     list-style-type: none;
     text-align: center;
+
+
 }
 
-.item {
+.item a {
     text-decoration: none;
     list-style: none;
     color: whitesmoke;
     font-size: 24px;
 }
 
-.active {
+.item .active {
     color: gold;
 }
