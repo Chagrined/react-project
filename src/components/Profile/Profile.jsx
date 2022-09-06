@@ -1,16 +1,11 @@
-import contentImg from '../../images/content-img.jpg';
 import MyPosts from './MyPosts/MyPosts';
 import style from './Profile.module.css';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = () => {
     return (
         <div className={style.profile}>
-            <div>
-                <img className={style.bgImage} alt='profile-img' src={contentImg} />
-            </div>
-            <div>
-                ava + desc
-            </div>
+            <ProfileInfo />
            <MyPosts />
         </div>
     )
