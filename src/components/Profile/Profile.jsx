@@ -6,7 +6,7 @@ const Profile = () => {
     return (
         <div className={style.profile}>
             <ProfileInfo />
-           <MyPosts />
+            <MyPosts />
         </div>
     )
 }
