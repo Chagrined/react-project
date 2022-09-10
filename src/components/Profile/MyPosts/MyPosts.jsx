@@ -12,7 +12,7 @@ const MyPosts = (props) => {
                 <div><button>add post</button></div>
             </div>
             <div>
-                {props.posts.map(item => <Post likeCount={item.likeCount} message={item.message} />)}
+                {props.postsState.map(item => <Post likeCount={item.likeCount} message={item.message} />)}
             </div>
         </div>
     )

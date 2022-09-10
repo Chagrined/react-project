@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import style from './Navbar.module.css'
+import SideBar from './SideBar/SideBar';
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <nav className={style.nav}>
             <li className={style.item}>
@@ -13,6 +14,9 @@ const Navbar = () => {
             <li>news</li>
             <li>music</li>
             <li>settings</li>
+            <div className={style.sideBar}>
+            {props.sideBar.map(item => <SideBar name={item.name} img={item.img} id={item.id}/>)}
+            </div>
         </nav >
     )
 }

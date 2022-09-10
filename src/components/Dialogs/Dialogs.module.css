@@ -3,11 +3,47 @@
   grid-template-columns: 2fr 10fr;
 }
 
+.dialog {
+  display: flex;
+  align-items: center;
+  margin: 7px;
+}
+
 .dialogsItem a {
   text-decoration: none;
   color: black;
+  margin-left: 10px;
 }
 
 .dialog .active {
   color: gold;
 }
+
+.dialog img {
+  width: 30px;
+  height: 30px;
+}
+
+.messages {
+  max-width: 400px;
+}
+
+.messageItem {
+  margin: 7px;
+  width: 100%;
+}
+
+.messageItem img {
+  width: 20px;
+  height: 20px;
+}
+
+.messageItemRight {
+  text-align: right;
+}
+
+.messageItemRight img {
+  width: 20px;
+  height: 20px;
+}
+

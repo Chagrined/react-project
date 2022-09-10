@@ -4,8 +4,6 @@
     background-color: greenyellow;
     list-style-type: none;
     text-align: center;
-
-
 }
 
 .item a {
@@ -17,4 +15,21 @@
 
 .item .active {
     color: gold;
+}
+
+.sideBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sideBarItem img {
+    width: 30px;
+    height: 30px;
+    margin-top: 100px;
+}
+
+.sideBarItem a {
+    text-decoration: none;
+    color: white
 }
