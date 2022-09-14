@@ -3,11 +3,10 @@ import style from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
-
     return (
         <div className={style.profile}>
             <ProfileInfo />
-            <MyPosts postsState={props.profilePage.postsState}/>
+            <MyPosts profilePage={props.state.profilePage} addPost={props.addPost} changePost={props.changePost}/>
         </div>
     )
 }

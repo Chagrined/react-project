@@ -1,4 +1,4 @@
-import contentImg from '../../../images/content-img.jpg';
+import contentImg from '../../../../images/content-img.jpg';
 import style from './ProfileInfo.module.css';
 
 const ProfileInfo = () => {

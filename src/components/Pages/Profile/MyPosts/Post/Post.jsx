@@ -1,4 +1,4 @@
-import avatarPost from '../../../../images/avatarPost.png';
+import avatarPost from '../../../../../images/avatarPost.png';
 import style from './Post.module.css';
 
 const Post = (props) => {
