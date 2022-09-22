@@ -18,8 +18,8 @@ function App(props) {
       <Navbar sideBar={props.state.sideBar} />
       <div className='content'>
         <Routes>
-          <Route path='/*' element={<Profile state={props.state}  addPost={props.addPost} changePost={props.changePost}/>} />
-          <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage} />} />
+          <Route path='/*' element={<Profile state={props.state}  dispatch={props.dispatch} />} />
+          <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch}/>} />
           <Route path='/news/' element={<News />} />
           <Route path='/music/' element={<Music />} />
           <Route path='/settings/' element={<Settings />} />

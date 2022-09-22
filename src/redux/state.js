@@ -1,3 +1,5 @@
+import messageReducer from "./messagesReducer";
+import profileReducer from "./profileReducer";
 
 
 let store = {
@@ -17,6 +19,7 @@ let store = {
                 { message: "How are you?", id: 2, img: 'https://cdn-icons-png.flaticon.com/512/149/149995.png' },
                 { message: "what are you doing?", id: 3 },
             ],
+            messagesText: '',
             dialogsState: [
                 { name: 'Vanya', id: 1, img: 'https://cdn-icons-png.flaticon.com/512/149/149452.png' },
                 { name: 'Arsen', id: 2, img: 'https://cdn-icons-png.flaticon.com/512/149/149995.png' },
@@ -30,33 +33,26 @@ let store = {
         ]
     },
 
-    getState () {
+    getState() {
         return this._state
-    }, 
-    _renderEntaireTree: () =>{
-        
     },
-    addPost (){
-        let valuePost = {
-            id: 5,
-            message: this._state.profilePage.postValue,
-            likeCount: 200
-        }
-
-        this._state.profilePage.postsState.unshift(valuePost);
-        this._state.profilePage.postValue = ''
-        this._renderEntaireTree(this._state)
+    _renderEntaireTree() {
     },
-    changePost (textPost)  {
-        
-        this._state.profilePage.postValue = textPost;
-
-        this._renderEntaireTree(this._state)
-    },
-    subscriber  (observer)  {
+    subscriber(observer) {
         this._renderEntaireTree = observer
+    },
+
+
+    dispatch(action) {
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = messageReducer(this._state.dialogsPage, action);
+        this._renderEntaireTree(this._state)
+
+
     }
 }
+
+
 
 
 
