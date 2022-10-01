@@ -1,7 +1,8 @@
 .nav {
     grid-area: nav;
 
-    background-color: greenyellow;
+    background-color: rgb(96, 103, 141);
+    ;
     list-style-type: none;
     text-align: center;
 }

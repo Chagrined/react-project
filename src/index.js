@@ -3,24 +3,27 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
-import store from './redux/state';
+import store from './redux/reduxStore';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export const renderEntaireTree = (state) =>{
-    
-root.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <App state={state} dispatch={store.dispatch.bind(store)}/>
-    </React.StrictMode>
-  </BrowserRouter>
-);
+export const renderEntaireTree = (state) => {
+
+  root.render(
+    <BrowserRouter>
+      <React.StrictMode>
+        <App state={state} dispatch={store.dispatch.bind(store)} />
+      </React.StrictMode>
+    </BrowserRouter>
+  );
 }
 
 renderEntaireTree(store.getState());
-store.subscriber(renderEntaireTree);
+store.subscribe(() => {
+  let state = store.getState();
+  renderEntaireTree(state)
+});
 
 
 
