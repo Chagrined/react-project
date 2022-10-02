@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
-import store from './redux/state';
+import store from './redux/reduxState';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,7 +20,10 @@ root.render(
 }
 
 renderEntaireTree(store.getState());
-store.subscriber(renderEntaireTree);
+store.subscribe(() => {
+  let state = store.getState();
+  renderEntaireTree(state)
+});
 
 
 

@@ -1,7 +1,21 @@
 const CHANGE_MESSAGE = 'CHANGE-MESSAGE';
 const ADD_MESSAGE = 'ADD-MESSAGE';
 
-const messageReducer = (state, action) => {
+let initialState =  {
+    messagesState: [
+        { message: "Hi", id: 1, img: 'https://cdn-icons-png.flaticon.com/512/149/149452.png' },
+        { message: "How are you?", id: 2, img: 'https://cdn-icons-png.flaticon.com/512/149/149995.png' },
+        { message: "what are you doing?", id: 3 },
+    ],
+    messagesText: '',
+    dialogsState: [
+        { name: 'Vanya', id: 1, img: 'https://cdn-icons-png.flaticon.com/512/149/149452.png' },
+        { name: 'Arsen', id: 2, img: 'https://cdn-icons-png.flaticon.com/512/149/149995.png' },
+        { name: 'Dima', id: 3, img: 'https://cdn-icons-png.flaticon.com/512/3843/3843912.png' }
+    ]
+}
+
+const messageReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_MESSAGE:
             state.messagesText = action.textMessage;

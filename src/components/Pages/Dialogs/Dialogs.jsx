@@ -7,7 +7,6 @@ import { addMessageActionCreator, changeMessageActionCreator } from '../../../re
 
 const Dialogs = (props) => {
     
-
     const onChangeMessage = (event) => {
         let messageText = event.target.value;
         props.dispatch(changeMessageActionCreator(messageText))

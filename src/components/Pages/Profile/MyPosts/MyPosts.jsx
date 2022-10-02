@@ -7,10 +7,10 @@ import {changePostActionCreator, addPostActionCreator} from '../../../../redux/p
 
 const MyPosts = (props) => {
 
-    const postAreaRef = React.useRef();
+    
 
-    let OnChangePost = () => {
-        let postTextChange = postAreaRef.current.value;
+    let OnChangePost = (e) => {
+        let postTextChange = e.target.value;
         props.dispatch(changePostActionCreator(postTextChange));
     }
 
@@ -22,7 +22,7 @@ const MyPosts = (props) => {
         <div>
             <h3>My posts</h3>
             <div>
-                <textarea ref={postAreaRef} onChange={OnChangePost} value={props.profilePage.postValue}/>
+                <textarea  onChange={OnChangePost} value={props.profilePage.postValue}/>
                 <div>
                     <button onClick={addPost}>add post</button>
                 </div>
