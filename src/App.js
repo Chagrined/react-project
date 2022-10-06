@@ -19,7 +19,7 @@ function App(props) {
       <Navbar sideBar={props.state.sideBar} />
       <div className='content'>
         <Routes>
-          <Route path='/*' element={<Profile state={props.state} dispatch={props.dispatch} />} />
+          <Route path='/*' element={<Profile store={props.store} dispatch={props.dispatch} />} />
           <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />} />
           <Route path='/news/' element={<News />} />
           <Route path='/music/' element={<Music />} />
