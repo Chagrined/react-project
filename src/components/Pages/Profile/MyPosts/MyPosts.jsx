@@ -1,13 +1,14 @@
 import React from 'react';
 import style from './MyPosts.module.css';
 import Post from './Post/Post';
-import { changePostActionCreator, addPostActionCreator } from '../../../../redux/profileReducer'
+
 
 
 
 const MyPosts = (props) => {
     let changePost = (e) => {
-        props.onChangePost(e)
+        let value = e.target.value;
+        props.onChangePost(value)
     }
 
     let addPost = () => {

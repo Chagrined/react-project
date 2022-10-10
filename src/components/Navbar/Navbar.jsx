@@ -22,9 +22,9 @@ const Navbar = (props) => {
             <li className={style.item}>
                 <NavLink to={'/settings'} className={data => data.isActive ? style.active : ''}>settings</NavLink>
             </li>
-            <div className={style.sideBar}>
+            {/* <div className={style.sideBar}>
                 {props.sideBar.map(item => <SideBar name={item.name} img={item.img} id={item.id} />)}
-            </div>
+            </div> */}
         </nav >
     )
 }
